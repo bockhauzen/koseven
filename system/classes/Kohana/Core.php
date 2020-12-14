@@ -591,8 +591,8 @@ class Kohana_Core {
 			// This path has been cached
 			return Kohana::$_files[$path.($array ? '_array' : '_path')];
 		}
-
-		if (Kohana::$profiling === TRUE AND class_exists('Profiler', FALSE))
+			
+		if (Kohana::$profiling === TRUE AND class_exists('Profiler', TRUE))
 		{
 			// Start a new benchmark
 			$benchmark = Profiler::start('Kohana', __FUNCTION__);
